@@ -28,6 +28,13 @@ a:hover {
 }
 
 /**
+    When a page is currently displayed
+*/
+.active {
+    color: #000000
+}
+
+/**
     General styling for header  
 */
 header {
