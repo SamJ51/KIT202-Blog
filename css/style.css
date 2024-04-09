@@ -31,7 +31,8 @@ a:hover {
     When a page is currently displayed
 */
 .active {
-    color: #000000
+    color: #000000;
+    font-weight: bold;
 }
 
 /**
@@ -78,6 +79,13 @@ article {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* A subtle shadow for depth */
+}
+
+.about {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
 /**
