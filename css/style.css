@@ -1,0 +1,134 @@
+/**
+    General styling
+*/
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/**
+    Styling for links
+*/
+a {
+    color: #0067a5;
+    text-decoration: none;
+    padding-left: 30px;
+    font-size: 1.5rem;
+}
+
+/**
+    Styling when hovering over links
+*/
+a:hover {
+    text-decoration: underline;
+}
+
+/**
+    General styling for header  
+*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #78AB46;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/**
+    Styling for garden logo image (mainly size adjustment)
+*/
+header .logo img {
+    width: 150px;
+}
+
+/**
+    Styling for navigation menu
+*/
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+/**
+    Styling for navigation links
+*/
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/**
+    Styling for articles
+*/
+article {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* A subtle shadow for depth */
+}
+
+/**
+    Styling for article titles
+*/
+article h2 {
+    color: #4a772f;
+}
+
+/**
+    Styling for article date written
+*/
+.post-date {
+    color: #999;
+    font-style: italic;
+}
+
+/**
+    Adjustments for article image
+*/
+article img {
+    max-width: 100%
+}
+
+/**
+    Class for wrapping text around images
+*/
+.wrap-image {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+/**
+    Styling for footer with copyright
+*/
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    clear: both;
+}
+
+/**
+    Improves UX for devices of different sizes
+*/
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    article {
+        margin: 20px;
+    }
+}
+
+
+
