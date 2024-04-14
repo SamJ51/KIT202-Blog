@@ -13,7 +13,7 @@ body {
 /**
     Styling for links
 */
-a {
+li>a {
     color: #0067a5;
     text-decoration: none;
     padding-left: 30px;
@@ -23,7 +23,7 @@ a {
 /**
     Styling when hovering over links
 */
-a:hover {
+li>a:hover {
     text-decoration: underline;
 }
 
@@ -81,6 +81,9 @@ article {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* A subtle shadow for depth */
 }
 
+/**
+    Styling for the about section
+*/
 .about {
     text-align: center;
     padding: 20px;
@@ -129,6 +132,18 @@ footer {
     text-align: center;
     padding: 1rem 0;
     clear: both;
+}
+
+.post {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.tags {
+    color:#0067a5;
 }
 
 /**
