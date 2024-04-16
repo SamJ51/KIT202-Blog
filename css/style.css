@@ -134,6 +134,9 @@ footer {
     clear: both;
 }
 
+/**
+    Styling for the posts
+*/
 .post {
     max-width: 90%;
     margin: 20px auto;
@@ -142,8 +145,31 @@ footer {
     border-radius: 8px;
 }
 
+/**
+    Styling for tags
+*/
 .tags {
     color:#0067a5;
+}
+
+/**
+    Styling for the post content
+*/
+.post-content {
+    display: none;
+}
+
+.read-button {
+    border: none;
+    background-color: #fff;
+    color: #4baf09;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.read-button:hover {
+    text-decoration: underline;
+    font-size: 1.1em;
 }
 
 /**
