@@ -58,6 +58,27 @@ button[id="reset"]:hover {
     background-color: #97211b;
 }
 
+.error {
+    color: #f44336;
+    margin-bottom: 10px;
+}
+
+#usernameError {
+    display: none;
+}
+
+#emailError {
+    display: none;
+}
+
+#passwordError {
+    display: none;
+}
+
+#confirmPasswordError {
+    display: none;
+}
+
 /* For small devices */
 @media (max-width: 600px) {
     body {
