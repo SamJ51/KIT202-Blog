@@ -58,7 +58,16 @@ a.button-link:hover {
     text-decoration: underline;
 }
 
+.error {
+    color: #f44336;
+    margin-bottom: 10px;
+}
+
 #usernameEmpty {
+    display: none;
+}
+
+#passwordEmpty {
     display: none;
 }
 

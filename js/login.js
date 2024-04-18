@@ -16,24 +16,36 @@ function isEmpty(field) {
 }
 
 function validateForm(event) {
-    const username = loginForm['username'].value;
-    const password = loginForm['password'].value;
+    const usernameL = loginForm['username'].value;
+    const passwordL = loginForm['password'].value;
 
-    if (isEmpty(username)) {
+    if (isEmpty(usernameL)) {
         usernameEmpty.style.display = 'block';
+        username.style.border = '2px solid red';
+        usernameLabel.style.color = 'red';
+        usernameLabel.style.fontWeight = 'bold';
         event.preventDefault();
     }
     else
     {
         usernameEmpty.style.display = 'none';
+        username.style.border = '1px solid #CCC';
+        usernameLabel.style.color = 'black';
+        usernameLabel.style.fontWeight = 'normal';
     }
 
-    if (isEmpty(password)) {
+    if (isEmpty(passwordL)) {
         passwordEmpty.style.display = 'block';
+        password.style.border = '2px solid red';
+        passwordLabel.style.color = 'red';
+        passwordLabel.style.fontWeight = 'bold';
         event.preventDefault();
     }
     else
     {
         passwordEmpty.style.display = 'none';
+        password.style.border = '1px solid #CCC';
+        passwordLabel.style.color = 'black';
+        passwordLabel.style.fontWeight = 'normal';
     }
 }

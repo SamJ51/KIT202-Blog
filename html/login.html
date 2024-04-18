@@ -25,17 +25,20 @@
 
     <main>
       <h1>Log In</h1>
-      <form id="registrationForm">
+      <form id="registrationForm" novalidate action="index.html">
         <div>
-          <label for="username">Username:</label>
+          <label for="username" id="usernameLabel">Username:</label>
           <input type="text" id="username" name="username">
           <p id="usernameEmpty" class="error">Username is required</p>
         </div>
         <div>
-          <label for="password">Password:</label>
+          <label for="password" id="passwordLabel">Password:</label>
           <input type="password" id="password" name="password">
+          <p id="passwordEmpty" class="error">Password is required</p>
         </div>
-        <button type="submit">Log In</button>
+        <a href="index.html">
+          <button type="submit">Log In</button>
+        </a>
         <a href="register.html" class="button-link">Don't have an account? Sign Up!</a>
       </form>
     </main>
@@ -44,7 +47,7 @@
         <p>&copy; 2024 Garden Blog. All rights reserved.</p>
       </footer>
   
-      <script src="js/main.js"></script>
+      <script src="/js/main.js"></script>
       <script src="/js/login.js"></script>
     </body>
   </html>
