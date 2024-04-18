@@ -27,24 +27,24 @@
 
   <main>
     <h1>Register</h1>
-    <form id="registrationForm" novalidate>
+    <form id="registrationForm" novalidate action="index.html">
       <div>
-        <label for="username">Username:</label>
+        <label for="username" id="usernameLabel">Username:</label>
         <input type="text" id="username" name="username">
         <p id="usernameEmpty" class="error">Username is required</p>
       </div>
       <div>
-        <label for="email">Email Address:</label>
+        <label for="email" id="emailLabel">Email Address:</label>
         <input type="email" id="email" name="email">
         <p id="emailEmpty" class="error">Email is required</p>
       </div>
       <div>
-        <label for="password">Password:</label>
+        <label for="password" id="passwordLabel">Password:</label>
         <input type="password" id="password" name="password">
         <p id="passwordEmpty" class="error">Password is required</p>
       </div>
       <div>
-        <label for="confirmPassword">Confirm Password:</label>
+        <label for="confirmPassword" id="confirmPasswordLabel">Confirm Password:</label>
         <input type="password" name="confirmPassword" id="confirmPassword">
         <p id="confirmPasswordEmpty" class="error">Confirm Password is required</p>
       </div>
