@@ -1,6 +1,6 @@
-const form = document.forms['registrationForm'];
-if (form) {
-    form.addEventListener('submit', validateForm);
+const RegisterForm = document.forms['registrationForm'];
+if (RegisterForm) {
+    RegisterForm.addEventListener('submit', validateForm);
 } else {
     console.error('Unable to find the registration form; no validation will be performed');
 }
@@ -16,10 +16,10 @@ function isEmpty(field) {
 }
 
 function validateForm(event) {
-    const username = form['username'].value;
-    const email = form['email'].value;
-    const password = form['password'].value;
-    const confirmPassword = form['confirmPassword'].value;
+    const username = RegisterForm['username'].value;
+    const email = RegisterForm['email'].value;
+    const password = RegisterForm['password'].value;
+    const confirmPassword = RegisterForm['confirmPassword'].value;
 
     if (isEmpty(username)) {
         usernameEmpty.style.display = 'block';

@@ -1,6 +1,6 @@
 const loginForm = document.forms['registrationForm'];
-if (form) {
-    form.addEventListener('submit', validateForm);
+if (loginForm) {
+    loginForm.addEventListener('submit', validateForm);
 } else {
     console.error('Unable to find the registration form; no validation will be performed');
 }
@@ -16,8 +16,8 @@ function isEmpty(field) {
 }
 
 function validateForm(event) {
-    const username = form['username'].value;
-    const password = form['password'].value;
+    const username = loginForm['username'].value;
+    const password = loginForm['password'].value;
 
     if (isEmpty(username)) {
         usernameEmpty.style.display = 'block';
