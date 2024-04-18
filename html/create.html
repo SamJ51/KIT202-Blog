@@ -6,6 +6,7 @@
     <title>Create Post - Garden Blog</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/create.css" />
+    <script src="/js/create.js" defer></script>
   </head>
   <body>
     <header>
@@ -25,15 +26,15 @@
     <main>
       <h1 id="page-title">Create Post</h2>
       <article class="post">
-        <form id="post-create" novalidate action="index.html">
-          <label for="title">Title: </label><br>
+        <form id="postCreate" novalidate action="index.html">
+          <label for="titleCreate" id="titleLabel">Title: </label><br>
           <input type="text" id="title" name="title"/><br>
           <p id="titleEmpty" class="error">Title is required</p>
           <p id="titleTooBig" class="error">The title cannot exceed 80 characters.</p>
-          <label for="tags">Tags/Keywords: </label><br>
+          <label for="tags" id="tagsLabel">Tags/Keywords: </label><br>
           <input type="text" id="tags" name="tags"/><br>
           <p id="tagsEmpty" class="error">Tags are required</p>
-          <label for="content">Content: </label><br>
+          <label for="content" id="contentLabel">Content: </label><br>
           <textarea id="content" name="content"></textarea><br>
           <p id="contentEmpty" class="error">Content is required</p>
           <button type="submit" id="submit">Create Post</button>
