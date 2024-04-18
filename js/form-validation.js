@@ -22,22 +22,22 @@ function validateForm(event) {
     const confirmPassword = form['confirmPassword'].value;
 
     if (isEmpty(username)) {
-        usernameError.style.display = 'block';
+        usernameEmpty.style.display = 'block';
         event.preventDefault();
     }
 
     if (isEmpty(email)) {
-        emailError.style.display = 'block';
+        emailEmpty.style.display = 'block';
         event.preventDefault();
     }
 
     if (isEmpty(password)) {
-        passwordError.style.display = 'block';
+        passwordEmpty.style.display = 'block';
         event.preventDefault();
     }
 
     if (isEmpty(confirmPassword)) {
-        confirmPasswordError.style.display = 'block';
+        confirmPasswordEmpty.style.display = 'block';
         event.preventDefault();
     }
 }

@@ -63,19 +63,19 @@ button[id="reset"]:hover {
     margin-bottom: 10px;
 }
 
-#usernameError {
+#usernameEmpty {
     display: none;
 }
 
-#emailError {
+#emailEmpty {
     display: none;
 }
 
-#passwordError {
+#passwordEmpty {
     display: none;
 }
 
-#confirmPasswordError {
+#confirmPasswordEmpty {
     display: none;
 }
 
