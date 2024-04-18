@@ -5,6 +5,8 @@ if (registerForm) {
     console.error('Unable to find the registration form; no validation will be performed');
 }
 
+
+// check if field is empty (implemented as a function as it can be used multiple times)
 function isEmpty(field) {
     if (field === "") {
         return true;
@@ -16,11 +18,16 @@ function isEmpty(field) {
 }
 
 function validateForm(event) {
-    let usernameR = registerForm['username'].value;
-    let emailR = registerForm['email'].value;
-    let passwordR = registerForm['password'].value;
-    let confirmPasswordR = registerForm['confirmPassword'].value;
+    let usernameR = registerForm['username'].value; // get the value of the username field
+    let emailR = registerForm['email'].value; // get the value of the email field
+    let passwordR = registerForm['password'].value; // get the value of the password field
+    let confirmPasswordR = registerForm['confirmPassword'].value; // get the value of the confirm password field
+    const uppercase = /[A-Z]/g;
+    const lowercase = /[a-z]/g;
+    const numbers = /[0-9]/g;
+    const special = /[!@#$%^&*]/g;
 
+    //check if username is empty
     if (isEmpty(usernameR)) {
         usernameEmpty.style.display = 'block';
         username.style.border = '2px solid red';
@@ -36,6 +43,7 @@ function validateForm(event) {
         usernameLabel.style.fontWeight = 'normal';
     }
 
+    //check if email is empty
     if (isEmpty(emailR)) {
         emailEmpty.style.display = 'block';
         email.style.border = '2px solid red';
@@ -51,7 +59,7 @@ function validateForm(event) {
         emailLabel.style.fontWeight = 'normal';
     }
 
-
+    //check if password is empty
     if (isEmpty(passwordR)) {
         passwordEmpty.style.display = 'block';
         password.style.border = '2px solid red';
@@ -67,6 +75,7 @@ function validateForm(event) {
         passwordLabel.style.fontWeight = 'normal';
     }
 
+    //check if confirm password is empty
     if (isEmpty(confirmPasswordR)) {
         confirmPasswordEmpty.style.display = 'block';
         confirmPassword.style.border = '2px solid red';
@@ -82,6 +91,100 @@ function validateForm(event) {
         confirmPasswordLabel.style.fontWeight = 'normal';
     }
 
+    //check if password is at least 8 characters long
+    if (passwordR.length < 8) {
+        passwordTooShort.style.display = 'block';
+        password.style.border = '2px solid red';
+        passwordLabel.style.color = 'red';
+        passwordLabel.style.fontWeight = 'bold';
+        event.preventDefault();
+    } 
+    else
+    {
+        passwordTooShort.style.display = 'none';
+        password.style.border = '1px solid #CCC';
+        passwordLabel.style.color = 'black';
+        passwordLabel.style.fontWeight = 'normal';
+    }
+
+    //check if password contains at least one uppercase letter
+    if (!uppercase.test(passwordR)) {
+        passwordUppercase.style.display = 'block';
+        password.style.border = '2px solid red';
+        passwordLabel.style.color = 'red';
+        passwordLabel.style.fontWeight = 'bold';
+        event.preventDefault();
+    }
+    else
+    {
+        passwordUppercase.style.display = 'none';
+        password.style.border = '1px solid #CCC';
+        passwordLabel.style.color = 'black';
+        passwordLabel.style.fontWeight = 'normal';
+    }
     
+    //check if password contains at least one lowercase letter
+    if (!lowercase.test(passwordR)) {
+        passwordLowercase.style.display = 'block';
+        password.style.border = '2px solid red';
+        passwordLabel.style.color = 'red';
+        passwordLabel.style.fontWeight = 'bold';
+        event.preventDefault();
+    }
+    else
+    {
+        passwordLowercase.style.display = 'none';
+        password.style.border = '1px solid #CCC';
+        passwordLabel.style.color = 'black';
+        passwordLabel.style.fontWeight = 'normal';
+    }
+
+    //check if password contains at least one number
+    if (!numbers.test(passwordR)) {
+        passwordNumber.style.display = 'block';
+        password.style.border = '2px solid red';
+        passwordLabel.style.color = 'red';
+        passwordLabel.style.fontWeight = 'bold';
+        event.preventDefault();
+    }
+    else
+    {
+        passwordNumber.style.display = 'none';
+        password.style.border = '1px solid #CCC';
+        passwordLabel.style.color = 'black';
+        passwordLabel.style.fontWeight = 'normal';
+    }
+
+    //check if password contains at least one special character
+    if (!special.test(passwordR)) {
+        passwordSpecial.style.display = 'block';
+        password.style.border = '2px solid red';
+        passwordLabel.style.color = 'red';
+        passwordLabel.style.fontWeight = 'bold';
+        event.preventDefault();
+    }
+    else
+    {
+        passwordSpecial.style.display = 'none';
+        password.style.border = '1px solid #CCC';
+        passwordLabel.style.color = 'black';
+        passwordLabel.style.fontWeight = 'normal';
+    }
+
+    //check if password and confirm password match
+    if (passwordR !== confirmPasswordR) {
+        passwordMismatch.style.display = 'block';
+        confirmPassword.style.border = '2px solid red';
+        confirmPasswordLabel.style.color = 'red';
+        confirmPasswordLabel.style.fontWeight = 'bold';
+        event.preventDefault();
+    }
+    else
+    {
+        passwordMismatch.style.display = 'none';
+        confirmPassword.style.border = '1px solid #CCC';
+        confirmPasswordLabel.style.color = 'black';
+        confirmPasswordLabel.style.fontWeight = 'normal';
+    }
 }
 

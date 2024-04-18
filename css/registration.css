@@ -79,6 +79,31 @@ button[id="reset"]:hover {
     display: none;
 }
 
+#passwordMismatch {
+    display: none;
+}
+
+#passwordTooShort {
+    display: none;
+
+}
+
+#passwordUppercase {
+    display: none;
+}
+
+#passwordLowercase {
+    display: none;
+}
+
+#passwordNumber {
+    display: none;
+}
+
+#passwordSpecial {
+    display: none;
+}
+
 /* For small devices */
 @media (max-width: 600px) {
     body {

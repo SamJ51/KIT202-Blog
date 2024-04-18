@@ -44,11 +44,17 @@
         <label for="password" id="passwordLabel">Password:</label>
         <input type="password" id="password" name="password">
         <p id="passwordEmpty" class="error">Password is required</p>
+        <p id="passwordTooShort" class="error">Password must be at least 8 characters long</p>
+        <p id="passwordUppercase" class="error">Password must contain at least one uppercase letter</p>
+        <p id="passwordLowercase" class="error">Password must contain at least one lowercase letter</p>
+        <p id="passwordNumber" class="error">Password must contain at least one number</p>
+        <p id="passwordSpecial" class="error">Password must contain at least one special character</p>
       </div>
       <div>
         <label for="confirmPassword" id="confirmPasswordLabel">Confirm Password:</label>
         <input type="password" name="confirmPassword" id="confirmPassword">
         <p id="confirmPasswordEmpty" class="error">Confirm Password is required</p>
+        <p id="passwordMismatch" class="error">Passwords do not match</p>
       </div>
       <button type="submit">Register</button>
       <button type="reset" id="reset">Clear</button>
