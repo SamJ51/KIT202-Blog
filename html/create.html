@@ -28,10 +28,14 @@
         <form id="post-create">
           <label for="title">Title: </label><br>
           <input type="text" id="title" name="title"/><br>
+          <p id="titleEmpty" class="error">Title is required</p>
+          <p id="titleTooBig" class="error">The title cannot exceed 80 characters.</p>
           <label for="tags">Tags/Keywords: </label><br>
           <input type="text" id="tags" name="tags"/><br>
+          <p id="tagsEmpty" class="error">Tags are required</p>
           <label for="content">Content: </label><br>
           <textarea id="content" name="content"></textarea><br>
+          <p id="contentEmpty" class="error">Content is required</p>
           <button type="submit" id="submit">Create Post</button>
           <button type="reset" id="reset">Clear</button>
       </form>
@@ -43,5 +47,6 @@
       </footer>
   
       <script src="js/main.js"></script>
+      <script src="/js/create.js"></script>
     </body>
   </html>

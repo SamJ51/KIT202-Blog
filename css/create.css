@@ -23,6 +23,27 @@ button[id="reset"]:hover {
     background-color: #97211b;
 }
 
+.error {
+    color: #f44336;
+    margin-bottom: 40px;
+}
+
+#titleTooBig {
+    display: none;
+}
+
+#titleEmpty {
+    display: none;
+}
+
+#tagsEmpty {
+    display: none;
+}
+
+#contentEmpty {
+    display: none;
+}
+
 /* For small devices */
 @media (max-width: 600px) {
     body {
