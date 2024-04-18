@@ -25,20 +25,37 @@ function validateForm(event) {
         usernameEmpty.style.display = 'block';
         event.preventDefault();
     }
+    else
+    {
+        usernameEmpty.style.display = 'none';
+    }
 
     if (isEmpty(email)) {
         emailEmpty.style.display = 'block';
         event.preventDefault();
     }
+    else
+    {
+        emailEmpty.style.display = 'none';
+    }
+
 
     if (isEmpty(password)) {
         passwordEmpty.style.display = 'block';
         event.preventDefault();
     }
+    else
+    {
+        passwordEmpty.style.display = 'none';
+    }
 
     if (isEmpty(confirmPassword)) {
         confirmPasswordEmpty.style.display = 'block';
         event.preventDefault();
+    }
+    else
+    {
+        confirmPasswordEmpty.style.display = 'none';
     }
 }
 
