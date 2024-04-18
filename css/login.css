@@ -58,6 +58,10 @@ a.button-link:hover {
     text-decoration: underline;
 }
 
+#usernameEmpty {
+    display: none;
+}
+
 /* For small devices */
 @media (max-width: 600px) {
     body {

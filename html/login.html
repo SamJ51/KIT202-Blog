@@ -6,6 +6,7 @@
     <title>Login - Garden Blog</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/login.css" />
+    <script src="/js/login.js" defer></script>
   </head>
   <body>
     <header>
@@ -28,6 +29,7 @@
         <div>
           <label for="username">Username:</label>
           <input type="text" id="username" name="username">
+          <p id="usernameEmpty" class="error">Username is required</p>
         </div>
         <div>
           <label for="password">Password:</label>
@@ -43,5 +45,6 @@
       </footer>
   
       <script src="js/main.js"></script>
+      <script src="/js/form-validation.js"></script>
     </body>
   </html>
