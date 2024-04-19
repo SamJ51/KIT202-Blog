@@ -7,13 +7,9 @@ if (form) {
   );
 }
 
+// check if field is empty (implemented as a function as it can be used multiple times)
 function isEmpty(field) {
-  if (field === "") {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return field === "";
 }
 
 function validateForm(event) {

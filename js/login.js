@@ -5,14 +5,9 @@ if (loginForm) {
     console.error('Unable to find the registration form; no validation will be performed');
 }
 
+// check if field is empty (implemented as a function as it can be used multiple times)
 function isEmpty(field) {
-    if (field === "") {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return field === "";
 }
 
 function validateForm(event) {
@@ -26,8 +21,7 @@ function validateForm(event) {
         usernameLabel.style.fontWeight = 'bold';
         event.preventDefault();
     }
-    else
-    {
+    else {
         usernameEmpty.style.display = 'none';
         username.style.border = '1px solid #CCC';
         usernameLabel.style.color = 'black';
@@ -41,8 +35,7 @@ function validateForm(event) {
         passwordLabel.style.fontWeight = 'bold';
         event.preventDefault();
     }
-    else
-    {
+    else {
         passwordEmpty.style.display = 'none';
         password.style.border = '1px solid #CCC';
         passwordLabel.style.color = 'black';
