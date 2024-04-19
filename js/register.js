@@ -7,14 +7,9 @@ if (registerForm) {
 
 
 // check if field is empty (implemented as a function as it can be used multiple times)
+// check if field is empty (implemented as a function as it can be used multiple times)
 function isEmpty(field) {
-    if (field === "") {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return field === "";
 }
 
 function validateForm(event) {
@@ -26,6 +21,7 @@ function validateForm(event) {
     const lowercase = /[a-z]/g;
     const numbers = /[0-9]/g;
     const special = /[!@#$%^&*]/g;
+    const emailFormat = /\S+@\S+\.\S+/;
 
     //check if username is empty
     if (isEmpty(usernameR)) {
@@ -34,9 +30,7 @@ function validateForm(event) {
         usernameLabel.style.color = 'red';
         usernameLabel.style.fontWeight = 'bold';
         event.preventDefault();
-    }
-    else
-    {
+    } else {
         usernameEmpty.style.display = 'none';
         username.style.border = '1px solid #CCC';
         usernameLabel.style.color = 'black';
@@ -50,11 +44,23 @@ function validateForm(event) {
         emailLabel.style.color = 'red';
         emailLabel.style.fontWeight = 'bold';
         event.preventDefault();
-    }
-    else
-    {
+    } else {
         emailEmpty.style.display = 'none';
         email.style.border = '1px solid #CCC';
+        emailLabel.style.color = 'black';
+        emailLabel.style.fontWeight = 'normal';
+    }
+
+    //check email is correct format
+    if (!emailFormat.test(emailR)) {
+        emailWrongFormat.style.display = 'block';
+        email.style.border = '2px solid red';
+        emailLabel.style.color = 'red';
+        emailLabel.style.fontWeight = 'bold';
+        event.preventDefault();
+    } else if (!isEmpty(emailR)) {
+        emailWrongFormat.style.display = 'none';
+        emailWrongFormat.style.border = '1px solid #CCC';
         emailLabel.style.color = 'black';
         emailLabel.style.fontWeight = 'normal';
     }
@@ -66,9 +72,7 @@ function validateForm(event) {
         passwordLabel.style.color = 'red';
         passwordLabel.style.fontWeight = 'bold';
         event.preventDefault();
-    }
-    else
-    {
+    } else {
         passwordEmpty.style.display = 'none';
         password.style.border = '1px solid #CCC';
         passwordLabel.style.color = 'black';
@@ -82,9 +86,7 @@ function validateForm(event) {
         confirmPasswordLabel.style.color = 'red';
         confirmPasswordLabel.style.fontWeight = 'bold';
         event.preventDefault();
-    }
-    else
-    {
+    } else {
         confirmPasswordEmpty.style.display = 'none';
         confirmPassword.style.border = '1px solid #CCC';
         confirmPasswordLabel.style.color = 'black';
@@ -98,9 +100,7 @@ function validateForm(event) {
         passwordLabel.style.color = 'red';
         passwordLabel.style.fontWeight = 'bold';
         event.preventDefault();
-    } 
-    else
-    {
+    } else {
         passwordTooShort.style.display = 'none';
         password.style.border = '1px solid #CCC';
         passwordLabel.style.color = 'black';
@@ -114,15 +114,13 @@ function validateForm(event) {
         passwordLabel.style.color = 'red';
         passwordLabel.style.fontWeight = 'bold';
         event.preventDefault();
-    }
-    else
-    {
+    } else {
         passwordUppercase.style.display = 'none';
         password.style.border = '1px solid #CCC';
         passwordLabel.style.color = 'black';
         passwordLabel.style.fontWeight = 'normal';
     }
-    
+
     //check if password contains at least one lowercase letter
     if (!lowercase.test(passwordR)) {
         passwordLowercase.style.display = 'block';
@@ -130,9 +128,7 @@ function validateForm(event) {
         passwordLabel.style.color = 'red';
         passwordLabel.style.fontWeight = 'bold';
         event.preventDefault();
-    }
-    else
-    {
+    } else {
         passwordLowercase.style.display = 'none';
         password.style.border = '1px solid #CCC';
         passwordLabel.style.color = 'black';
@@ -146,9 +142,7 @@ function validateForm(event) {
         passwordLabel.style.color = 'red';
         passwordLabel.style.fontWeight = 'bold';
         event.preventDefault();
-    }
-    else
-    {
+    } else {
         passwordNumber.style.display = 'none';
         password.style.border = '1px solid #CCC';
         passwordLabel.style.color = 'black';
@@ -162,9 +156,7 @@ function validateForm(event) {
         passwordLabel.style.color = 'red';
         passwordLabel.style.fontWeight = 'bold';
         event.preventDefault();
-    }
-    else
-    {
+    } else {
         passwordSpecial.style.display = 'none';
         password.style.border = '1px solid #CCC';
         passwordLabel.style.color = 'black';
@@ -178,9 +170,7 @@ function validateForm(event) {
         confirmPasswordLabel.style.color = 'red';
         confirmPasswordLabel.style.fontWeight = 'bold';
         event.preventDefault();
-    }
-    else
-    {
+    } else {
         passwordMismatch.style.display = 'none';
         confirmPassword.style.border = '1px solid #CCC';
         confirmPasswordLabel.style.color = 'black';
